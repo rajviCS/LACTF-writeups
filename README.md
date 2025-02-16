@@ -106,7 +106,7 @@ As input, I put %3D%3DQflJX%5BOLD_DATA%5Do91csxWY39VespnepJ3%5BOLD_DATA%5Df9mb7%
 
 lactf{no_grizzly_walls_here}
 
-**crypto/Extremely Convenient (with team) **
+**crypto/Extremely Convenient (with team)**
 
 In this challenge, I worked with my teammates. Upon connecting to the challenge as well as inspecting the source code file provided in the challenge, we realized that the code encrypts the flag from a file using AES in ECB mode and displays this encrypted flag in hex. Then, the user has an option to attempt to decrypt a provided ciphertext but there’s a catch - only if the provided ciphertext is not the encrypted flag does it decrypt it and prints the result. If the provided ciphertext is the flag, it refuses to decrypt the flag. We tried several options, such as starting from the basic idea of doing buffer overflow and seeing if it was susceptible to this. It didn’t appear to work. Then, shoutout to my teammate Cookie, who thought of changing only the last letter in the encrypted flag in hex, to check what the output gives us. It turned out to be a partial flag: 
 b"b'lactf{seems_it_was_extremely_convenient_to_get_t\\xf4\\xbd\\x17\\x97#\\x8cW\\xfei\\xbf\\xe17/iB.'\n"
