@@ -5,7 +5,7 @@ lactf writeups - 2025
 
 The challenge hints: Just click the flag :)
 
-I navigated to the website challenge - https://lucky-flag.chall.lac.tf/ and it appears that the site is filled with boxes - and all of them have flags written on them! 
+I navigated to the website challenge - https://lucky-flag.chall.lac.tf/ and it appears that the site is filled with boxes - and all of them have the word "flags" written on them! 
 I started by clicking on the ones at the start. A pop up appears, stating that a flag cannot be found. 
 This leads me to the conclusion that the flag can be obtained when one out of the many boxes, which when clicked yields the flag, is clicked.
 Since there are too many boxes, automation through code needs to be used so that I have a way where all the boxes are clicked at once, rather than a human having to do it manually. So doing inspect element --> console --> and then using a javascript code yields a flag. 
