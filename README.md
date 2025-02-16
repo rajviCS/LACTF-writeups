@@ -76,6 +76,7 @@ You DELETED MY WEBSITE!!!!! HOW DARE YOU????? 32BFBAEB91EFF980842D9FA19477A42E
 
 This challenge has a website mentioned in the description, so let’s navigate to it. There is a textbox with a space to enter the flag and check if it is correct. My first hunch is to just right click and click on “view page source.” Upon viewing the page source, I noticed a script, <script src="cabin.js"></script>. I right clicked on cabin.js and clicked to open it in a new tab. This yields more code, and then I noticed something interesting:
 
+```
 function checkFlag(flag) {
     const step1 = btoa(flag);
     const step2 = step1.split("").reverse().join("");
@@ -84,23 +85,24 @@ function checkFlag(flag) {
     const step5 = btoa(step4);
     return step5 === "JTNEJTNEUWZsSlglNUJPTERfREFUQSU1RG85MWNzeFdZMzlWZXNwbmVwSjMlNUJPTERfREFUQSU1RGY5bWI3JTVCT0xEX0RBVEElNURHZGpGR2I=";
 }
+```
 
 This suggests that several operations were done on the flag, and then an output of "JTNEJTNEUWZsSlglNUJPTERfREFUQSU1RG85MWNzeFdZMzlWZXNwbmVwSjMlNUJPTERfREFUQSU1RGY5bWI3JTVCT0xEX0RBVEElNURHZGpGR2I=" was obtained. The flag can therefore be reverse engineering through doing the opposite of these steps (i.e., decoding instead of encoding) in the reverse order. 
 
-Upon a quick google search, it is apparent that the btoa() method encodes the input in base-64. Therefore, using an online base64 calculator tool, I can decode an input of  "JTNEJTNEUWZsSlglNUJPTERfREFUQSU1RG85MWNzeFdZMzlWZXNwbmVwSjMlNUJPTERfREFUQSU1RGY5bWI3JTVCT0xEX0RBVEElNURHZGpGR2I=" 
+1. Upon a quick google search, it is apparent that the btoa() method encodes the input in base-64. Therefore, using an online base64 calculator tool, I can decode an input of  "JTNEJTNEUWZsSlglNUJPTERfREFUQSU1RG85MWNzeFdZMzlWZXNwbmVwSjMlNUJPTERfREFUQSU1RGY5bWI3JTVCT0xEX0RBVEElNURHZGpGR2I=" 
 
 The base64 calculator I used was this one, but any should work: https://emn178.github.io/online-tools/base64_decode.html 
 
-The result obtained from doing base64 decoding: %3D%3DQflJX%5BOLD_DATA%5Do91csxWY39VespnepJ3%5BOLD_DATA%5Df9mb7%5BOLD_DATA%5DGdjFGb 
+2. The result obtained from doing base64 decoding: %3D%3DQflJX%5BOLD_DATA%5Do91csxWY39VespnepJ3%5BOLD_DATA%5Df9mb7%5BOLD_DATA%5DGdjFGb 
 
-Next, I see that the step was to encodeURIComponent(step3) so I need an online URL decoder. The one I used was this, but any can work: https://www.urldecoder.org/ 
+3. Next, I see that the step was to encodeURIComponent(step3) so I need an online URL decoder. The one I used was this, but any can work: https://www.urldecoder.org/ 
 As input, I put %3D%3DQflJX%5BOLD_DATA%5Do91csxWY39VespnepJ3%5BOLD_DATA%5Df9mb7%5BOLD_DATA%5DGdjFGb and get the output of ==QflJX[OLD_DATA]o91csxWY39VespnepJ3[OLD_DATA]f9mb7[OLD_DATA]GdjFGb 
 
-Seeing that the step was for step2.replaceAll("Z", "[OLD_DATA]"); I know that I should now replace all instances of [OLD_DATA] in the string with the letter Z. The input of ==QflJX[OLD_DATA]o91csxWY39VespnepJ3[OLD_DATA]f9mb7[OLD_DATA]GdjFGb yields output: ==QflJXZo91csxWY39VespnepJ3Zf9mb7ZGdjFGb 
+4. Seeing that the step was for step2.replaceAll("Z", "[OLD_DATA]"); I know that I should now replace all instances of [OLD_DATA] in the string with the letter Z. The input of ==QflJX[OLD_DATA]o91csxWY39VespnepJ3[OLD_DATA]f9mb7[OLD_DATA]GdjFGb yields output: ==QflJXZo91csxWY39VespnepJ3Zf9mb7ZGdjFGb 
 
-Next, step1.split("").reverse().join("") suggests to reverse the string. The tool used: https://onlinestringtools.com/reverse-string with an input of ==QflJXZo91csxWY39VespnepJ3Zf9mb7ZGdjFGb yields an output of bGFjdGZ7bm9fZ3JpenpseV93YWxsc19oZXJlfQ==
+5. Next, step1.split("").reverse().join("") suggests to reverse the string. The tool used: https://onlinestringtools.com/reverse-string with an input of ==QflJXZo91csxWY39VespnepJ3Zf9mb7ZGdjFGb yields an output of bGFjdGZ7bm9fZ3JpenpseV93YWxsc19oZXJlfQ==
 
-Finally, btoa(flag) means that I should just do base64 decoding, input of bGFjdGZ7bm9fZ3JpenpseV93YWxsc19oZXJlfQ== gives output of the flag: 
+6. Finally, btoa(flag) means that I should just do base64 decoding, input of bGFjdGZ7bm9fZ3JpenpseV93YWxsc19oZXJlfQ== gives output of the flag: 
 
 lactf{no_grizzly_walls_here}
 
