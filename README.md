@@ -5,8 +5,8 @@ lactf writeups - 2025
 
 The challenge hints: Just click the flag :)
 
-I navigated to the website challenge - https://lucky-flag.chall.lac.tf/ and it appears that the site is filled with boxes - and all of them have the word "flags" written on them! 
-I started by clicking on the ones at the start. A pop up appears, stating that a flag cannot be found. 
+I navigated to the website challenge - https://lucky-flag.chall.lac.tf/ and it appears that the site is filled with boxes - and all of them have the word "flag" written on them! 
+I started by clicking on the boxes at the start. A pop up appears, stating that a flag cannot be found. 
 This leads me to the conclusion that the flag can be obtained when one out of the many boxes, which when clicked yields the flag, is clicked.
 Since there are too many boxes, automation through code needs to be used so that I have a way where all the boxes are clicked at once, rather than a human having to do it manually. So doing inspect element --> console --> and then using a javascript code yields a flag. 
 
@@ -65,11 +65,11 @@ You DELETED MY WEBSITE!!!!! HOW DARE YOU????? 32BFBAEB91EFF980842D9FA19477A42E
 
 13. The message now reads: A token in a TXT record at i-spy.chall.lac.tf...  
 
-14. At this one, I was going around in a few circles to figure out what this could mean and how to find the token. Shoutout to my teammate Komet for sharing that this probably had to do with doing DNS and suggesting that this site could help with it: https://dnschecker.org/all-dns-records-of-domain.php 
+14. At this one, I was going around in a few circles to figure out what this could mean and how to find the token. Shoutout to my teammate Komet for sharing that this probably had to do with DNS and suggesting that this site could help with it: https://dnschecker.org/all-dns-records-of-domain.php 
 
-15. After entering in the website as i-spy.chall.lac.tf/ and after navigating to the “TXT” record type we get the final token- Token: 7227E8A26FC305B891065FE0A1D4B7D4. 
+15. After entering in the website the url i-spy.chall.lac.tf/ and after navigating to the “TXT” record type we get the final token- Token: 7227E8A26FC305B891065FE0A1D4B7D4. 
 
-16. Finally, the flag is displayed instead of a new message: A Flag! Lactf{1_sp0773d_z_t0k3ns_4v3rywh3r3}. A pretty apt flag, I guess you might say  :) 
+16. Finally, the flag is displayed instead of a new message: A Flag! Lactf{1_sp0773d_z_t0k3ns_4v3rywh3r3}. A pretty apt flag, I guess one might say :) 
 
 
 **rev/javascryption**
