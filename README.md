@@ -38,7 +38,7 @@ So this appears to be a sort of scavenger hunt!
 
 3. Right click, Inspect, console → 5D1F98BCEE51588F6A7500C4DAEF8AD6. Message says: A token in the stylesheet... Stylesheet likely refers to the css file, which will be in our sources. 
 
-4. Right click, Inspect, Sources. Navigate to styles.css, and the /* Token: 29D3065EFED4A6F82F2116DA1784C265 */ appears at the top. Message says: A token in javascript code...
+4. Right click, Inspect, Sources. Navigate to styles.css, and the /* Token: 29D3065EFED4A6F82F2116DA1784C265 */ appears at the top. Message says: A token in javascript code... Again, this javascript is probably a .js file in our sources. 
 
 5. Navigate to thingy.js from the sources. // Token: 9D34859CA6FC9BB8A57DB4F444CDAE83. Message says: A token in a header...
 
@@ -56,7 +56,7 @@ Disallow: /a-magical-token.txt
 
 11. Entering the token above, the message: A token where Google is told what pages to visit and index… After some google search, I discover that what the hint likely refers to is an XML sitemap, which is a file listing the important pages on a website, and is used in making sure Google crawls them. Let’s navigate to this using: https://i-spy.chall.lac.tf/sitemap.xml. Aha! Token: F1C20B637F1B78A1858A3E62B66C3799. The message is: A token received when making a DELETE request to this page… 
 
-12. Trying to do the curl operation, I kept getting a curl connection time out error (perhaps something to do with being on school wifi?) Shoutout to my teammate Komet for performing the curl operation on this one: 
+12. A DELETE request is a kind of HTML request. A good tool to use to perform HTML requests is using curl, which is a is a command-line tool. Trying to do the curl operation, I kept getting a curl connection time out error (perhaps something to do with being on school wifi?) Shoutout to my teammate Komet for performing the curl operation on this one: 
 $ curl -X DELETE https://i-spy.chall.lac.tf/
 
 The output obtained: 
