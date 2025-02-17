@@ -59,6 +59,7 @@ Disallow: /a-magical-token.txt
 12. Trying to do the curl operation, I kept getting a curl connection time out error (perhaps something to do with being on school wifi?) Shoutout to my teammate Komet for performing the curl operation on this one: 
 $ curl -X DELETE https://i-spy.chall.lac.tf/
 
+The output obtained: 
 You DELETED MY WEBSITE!!!!! HOW DARE YOU????? 32BFBAEB91EFF980842D9FA19477A42E
 
 	where 32BFBAEB91EFF980842D9FA19477A42E must be the token. 
