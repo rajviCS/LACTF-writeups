@@ -112,6 +112,8 @@ In this challenge, I worked with my teammates. Upon connecting to the challenge 
 b"b'lactf{seems_it_was_extremely_convenient_to_get_t\\xf4\\xbd\\x17\\x97#\\x8cW\\xfei\\xbf\\xe17/iB.'\n"
 After tinkering with some more letters: 
 b"b'`b\\x0e2\\x1d\\xdf\\x813\\xe1\\xaf\\xce\\x92%\\x0ft$as_extremely_convenient_to_get_the_flag_too_heh}'\n"
+
+Then we get: 
 Lactf{seems_it_was_extremely_convenient_to_get_the_flag_too_heh}
 Finally get the flag! 
  
