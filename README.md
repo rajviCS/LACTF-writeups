@@ -152,7 +152,7 @@ app.post('/search', (req, res) => {
 
 ```
 
-Looking at this line -  const hasPremium = req.cookies.adminpw === adminpw - made me wonder if perhaps it’s a cookie tampering challenge? I suggested this to my teammates too. They had not done a cookie tampering challenge yet, so I shared how there are browser extensions where it’s possible to play around with the cookie values. But after a half hour, we still had no luck. 
+Looking at this line -  const hasPremium = req.cookies.adminpw === adminpw - made me wonder if perhaps it’s a cookie tampering challenge? I thought at first that the goal is to steal the cookie of the adminpw and impersonate that account. I suggested this to my teammates too. They had not done a cookie tampering challenge yet, so I shared how there are browser extensions where it’s possible to play around with the cookie values. But after a half hour, we still had no luck. 
 
 Then, shoutout to my team mate Cookie, who was thinking of trying to navigate through the website and thought of just visiting /render?id=admin to see if anything would pop up. It just displayed: 
 undefined
