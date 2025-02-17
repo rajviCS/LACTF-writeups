@@ -65,7 +65,7 @@ where 32BFBAEB91EFF980842D9FA19477A42E must be the token.
 
 13. The message now reads: A token in a TXT record at i-spy.chall.lac.tf...  
 
-14. At this one, I was going around in a few circles to figure out what this could mean and how to find the token. Shoutout to my teammate Komet for sharing that this probably had to do with DNS and suggesting that this site could help with it: https://dnschecker.org/all-dns-records-of-domain.php 
+14. At this one, I was going around in a few circles to figure out what this could mean and how to find the token. Shoutout to my teammate Komet for sharing that this probably had to do with DNS and suggesting that this site could help with it: https://dnschecker.org/all-dns-records-of-domain.php. From a google search, I realized that TXT records, which is likely what was being referenced here, are a type of DNS record containing information on a domain in text format. 
 
 15. After entering in the website the url i-spy.chall.lac.tf/ and after navigating to the “TXT” record type we get the final token- Token: 7227E8A26FC305B891065FE0A1D4B7D4. 
 
