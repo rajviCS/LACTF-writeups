@@ -56,7 +56,7 @@ Disallow: /a-magical-token.txt
 
 11. Entering the token above, the message: A token where Google is told what pages to visit and index… After some google search, I discover that what the hint likely refers to is an XML sitemap, which is a file listing the important pages on a website, and is used in making sure Google crawls them. Let’s navigate to this using: https://i-spy.chall.lac.tf/sitemap.xml. Aha! Token: F1C20B637F1B78A1858A3E62B66C3799. The message is: A token received when making a DELETE request to this page… 
 
-12. A DELETE request is a kind of HTML request. This reminded me of a good tool to use to perform HTML requests, which is cURL. cURL is a command-line tool. Trying to do the cURL operation, I kept getting a cURL connection time out error (perhaps something to do with being on school wifi?) Shoutout to my teammate Komet for performing the cURL operation on this one: 
+12. A DELETE request is a kind of HTML request. This reminded me of a good tool to use to perform HTML requests, which is cURL, which is a command-line tool. Trying to do the cURL operation, I kept getting a cURL connection time out error (perhaps something to do with being on school wifi?) Shoutout to my teammate Komet for performing the cURL operation on this one: 
 $ curl -X DELETE https://i-spy.chall.lac.tf/
 
 The output obtained: 
