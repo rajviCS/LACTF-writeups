@@ -160,6 +160,6 @@ flag
 
 lactf{t00_b4s3d_4t_ch3ss_f3_kf2}
 
-At the time, we wondered if this was a fluke, but the ctf platform accepted our flag. We wondered if this is how the other teams had solved it to, and decided we would definitely wait for the writeups to see if this was an unintended vulnerability or the intended solution. But either ways, so we weren’t complaining! :) 
+At the time, we wondered if this was a fluke, but the ctf platform accepted our flag. We wondered if this is how the other teams had solved it to, and decided we would definitely wait for the writeups to see if this was an unintended vulnerability or the intended solution. But either ways, we weren’t complaining! :) 
 
 **Thanks for reading!**
