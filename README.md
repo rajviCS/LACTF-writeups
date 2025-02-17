@@ -69,7 +69,7 @@ where 32BFBAEB91EFF980842D9FA19477A42E must be the token.
 
 15. After entering in the website the url i-spy.chall.lac.tf/ and after navigating to the “TXT” record type we get the final token- Token: 7227E8A26FC305B891065FE0A1D4B7D4. 
 
-16. Finally, the flag is displayed instead of a new message: A Flag! Lactf{1_sp0773d_z_t0k3ns_4v3rywh3r3}. A pretty apt flag, I guess one might say :) 
+16. Finally, after entering this final token the flag is displayed instead of a new message: A Flag! Lactf{1_sp0773d_z_t0k3ns_4v3rywh3r3}. A pretty apt flag, I guess one might say :) 
 
 
 **rev/javascryption**
