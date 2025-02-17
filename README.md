@@ -61,8 +61,7 @@ $ curl -X DELETE https://i-spy.chall.lac.tf/
 
 The output obtained: 
 You DELETED MY WEBSITE!!!!! HOW DARE YOU????? 32BFBAEB91EFF980842D9FA19477A42E
-
-	where 32BFBAEB91EFF980842D9FA19477A42E must be the token. 
+where 32BFBAEB91EFF980842D9FA19477A42E must be the token. 
 
 13. The message now reads: A token in a TXT record at i-spy.chall.lac.tf...  
 
