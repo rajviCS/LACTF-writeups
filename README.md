@@ -122,8 +122,9 @@ Finally get the flag!
 
 In this challenge, I worked with my teammates. One of my suggestions to the team was we could try seeing if it was an XSS challenge. I had watched a youtube video of the walkthrough on some of the web challenges from LA CTF 2024, and the formatting of the site for this challenge appeared to be similar to an XSS challenge from last year - especially the admin bot made it seem that way to me. I shared the video with my team mates, and after trying to do the same technique done in the video in the group, we found no luck. 
 
-Then, we looked through the source code: 
+Then, we looked through the code: 
 
+```
 app.get('/render', (req, res) => {
   const id = req.query.id;
   const op = lookup.get(id);
@@ -149,8 +150,9 @@ app.post('/search', (req, res) => {
   return res.send('lmao nothing');
 });
 
-Looking at this line -  const hasPremium = req.cookies.adminpw === adminpw;
-made me wonder if perhaps it’s a cookie tampering challenge? I suggested this to my teammates too. They had not done a cookie tampering challenge yet, so I shared how there are browser extensions where it’s possible to play around with the cookie values. But after a half hour, we still had no luck. 
+```
+
+Looking at this line -  const hasPremium = req.cookies.adminpw === adminpw - made me wonder if perhaps it’s a cookie tampering challenge? I suggested this to my teammates too. They had not done a cookie tampering challenge yet, so I shared how there are browser extensions where it’s possible to play around with the cookie values. But after a half hour, we still had no luck. 
 
 Then, shoutout to my team mate Cookie, who was thinking of trying to navigate through the website and thought of just visiting /render?id=admin to see if anything would pop up. It just displayed: 
 undefined
