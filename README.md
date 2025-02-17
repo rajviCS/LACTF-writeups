@@ -158,7 +158,7 @@ Then, shoutout to my team mate Cookie, who was thinking of trying to navigate th
 undefined
 undefined 
 
-But it didn’t lead to any errors. Next, Cookie tried to visit https://chessbased.chall.lac.tf/render?id=flag just to see what kind of output would show up. Imagine the surprise when that yielded the flag! 
+But it didn’t lead to any errors. And so, Cookie next tried to visit https://chessbased.chall.lac.tf/render?id=flag just to see what kind of output would show up. Imagine the surprise when that yielded the flag! 
 
 flag
 
